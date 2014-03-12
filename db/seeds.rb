@@ -1,17 +1,20 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 
+email = "admin@example.com"
+password = "administrator"
+
 User.create(
   name: "Admin",
-  email: "admin@example.com",
-  password: "administrator",
-  password_confirmation: "administrator",
+  email: email,
+  password: password,
+  password_confirmation: password,
   roles_mask: 1)
 
 # Send admin login details to console
 puts "Admin user successfully created:"
-puts "    email: admin@example.com"
-puts "    password: adminpass" 
+puts "    email: #{email}"
+puts "    password: #{password}"
 
 # Message.create([
 #   {   name: "Example Message", message_text: "Demo message to be sent to group.", description: "This is merely a test message." },
